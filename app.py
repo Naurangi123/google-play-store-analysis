@@ -5,15 +5,13 @@ import plotly.express as px
 
 pd.options.display.float_format = '{:,.2f}'.format
 
-# Read the CSV file and display its shape
+
 df_apps=pd.read_csv('apps.csv')
 print(df_apps.shape)
 
-# Display the first few rows and a sample of 5 rows
 print(df_apps.head())
 print(df_apps.sample(5))
 
-# Drop unnecessary columns
 df_apps.drop(['Last_Updated', 'Android_Ver'], axis=1, inplace=True)
 
 # Display the first few rows after dropping columns
